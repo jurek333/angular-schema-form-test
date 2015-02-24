@@ -1,0 +1,11 @@
+<h1>Main form</h1>
+
+<div ng-controller="JsonFormController">
+    <form name="testForm" ng-submit="onSubmit(testForm)">
+    	<p>bla bla bla</p>
+	    <div sf-schema="schema" sf-form="form" sf-model="model" 
+          sf-options="{ formDefaults: { ngModelOptions: { updateOn: 'blur' } }}">
+        </div>
+	    <input type="submit" value="Ok">
+    </form>
+</div>
