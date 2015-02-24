@@ -92,7 +92,8 @@ angular.module('valid').controller('JsonFormController', function($scope){
         }]
     }];
     for(var name in $scope.schema.properties) {
-        if(name !== 'comment' && name !== 'iWantComment' && name !== 'name') {
+        if(name !== 'comment' && name !== 'iWantComment' && 
+            name !== 'name' && name !== 'commentDetails') {
             $scope.form[2].tabs[1].items.push(name);
         }
     }
@@ -122,6 +123,7 @@ angular.module('valid').controller('JsonFormController', function($scope){
         copyValueTo: ["commentDetails"],                        // Copy values to these schema keys.
         condition: "model.iWantComment"                         // Show or hide field depending on an angular expression
     });
+    $scope.form[2].tabs[0].items.push("commentDetails");
 
     $scope.model = {};
 
